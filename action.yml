@@ -1,0 +1,30 @@
+name: Compatibility Table
+description: 'A Github Action that keeps a compatibility table in a given markdown file up to date by changing a README.'
+inputs:
+  source-repo:
+    description: 'Path to the source repository to fetch the latest tag. Mutually exclusive with source-version.'
+  source-version:
+    description: 'New version number to be added to the compatibility table. Mutually exclusive with source-repo.'
+  readme:
+    description: 'Path to the markdown file that is to be updated.'
+    required: true
+  dependency-repo:
+    description: 'Path to the dependency repository to fetch the latest tag. Mutually exclusive with dependency-version'
+  dependency-version:
+    description: 'Version number that the new source version is compatible with. Mutually exclusive with dependency-repo'
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    - name: Update compatibility table
+      run: |
+        python ./source/compatibility-table.py \
+        --source-repo ${{ inputs.source-repo }} \
+        --source-version ${{ inputs.source-version }} \
+        --dependency-repo ${{ inputs.dependency-repo }} \
+        --dependency-version ${{ inputs.dependency-version }} \
+        --readme ${{ inputs.readme }}

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GEWIS/actions-compatibility-table.git"
+    "url": "https://github.com/GEWIS/action-compatibility-table.git"
   },
   "private": false,
   "dependencies": {

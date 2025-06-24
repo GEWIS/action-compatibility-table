@@ -1,0 +1,17 @@
+{
+  "name": "actions-compatibility-table",
+  "version": "1.0.0",
+  "description": "Github Action to update a compatibility table in a markdown file.",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GEWIS/actions-compatibility-table.git"
+  },
+  "private": false,
+  "dependencies": {
+    "commander": "^14.0.0"
+  }
+}

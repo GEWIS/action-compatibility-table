@@ -13,5 +13,8 @@
   "private": false,
   "dependencies": {
     "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@gewis/release-config": "^2.4.0"
   }
 }

@@ -21,9 +21,11 @@ runs:
         node-version: "22.x"
 
     - name: Install dependencies
+      shell: bash
       run: npm ci
 
     - name: Update compatibility table
+      shell: bash
       run: |
         node index.mjs \
         --source-repo ${{ inputs.source-repo }} \

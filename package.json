@@ -11,10 +11,11 @@
     "url": "https://github.com/GEWIS/action-compatibility-table.git"
   },
   "private": false,
-  "dependencies": {
-    "commander": "^14.0.0"
-  },
   "devDependencies": {
     "@gewis/release-config": "^2.4.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/exec": "^1.1.1"
   }
 }

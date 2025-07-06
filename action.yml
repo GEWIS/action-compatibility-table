@@ -14,4 +14,4 @@ inputs:
     description: 'Version number that the new source version is compatible with. Mutually exclusive with dependency-repo'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'index.mjs'

@@ -13,5 +13,5 @@ inputs:
   dependency-version:
     description: 'Version number that the new source version is compatible with. Mutually exclusive with dependency-repo'
 runs:
-  using: 'node22'
+  using: 'node20'
   main: 'index.js'
